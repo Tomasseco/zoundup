@@ -17,6 +17,7 @@
   
   section {
     flex: 1;
+    text-align: center;
     padding: 2rem;
     background-color: #333;
     background-image: url('../assets/images/girl.png');
@@ -24,24 +25,61 @@
     background-position: center bottom;
     background-size: cover;
   }
-  
+
+  article {
+    background-color: #22222286;
+    backdrop-filter: blur(10px); /* Desenfoque del fondo */
+    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
+    text-align: left;
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 5px;
+  }
+
   /* Para pantallas pequeñas (móviles) */
   @media (max-width: 768px) {
     section {
-      background-size: 100% auto; /* Hace que la imagen ocupe todo el ancho pero mantenga la proporción */
+      background-size: 100% auto;
+    }
+    article {
+        width: 95%;
+        margin: 1rem auto;
+    }
+    article img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
     }
   }
   
   /* Para pantallas grandes (pantallas completas o escritorio) */
   @media (min-width: 769px) {
     section {
-      background-size:contain; /* Asegura que la imagen cubra todo el fondo */
+        background-size:contain; /* Asegura que la imagen cubra todo el fondo */
+        background-image:
+            url('../assets/images/girl.png'),
+            url('../assets/images/studio.jpg');
+        background-size: contain, cover;
+        background-position: center bottom, center top;
+    }
+    article {
+        width: 80%;
+        max-width:600px;
+        margin: 10px auto;
+        text-align: center;
+        height:fit-content;
+    }
+    article img {
+        width: 50%;
+        
     }
   }
   
   header {
     color: white;
     padding: 5px;
+    padding-top: 10px;
     background: linear-gradient(to bottom,  #1b1b1b 0%,#0e0e0e 100%);
 
   }
@@ -68,6 +106,7 @@
     background-color: #44b14a;
   }
 
+
   footer {
     background-color: #222;
     color: white;
@@ -75,3 +114,6 @@
     text-align: center;
   }
   
+    article p {
+        color:#aaa9a9
+    }
