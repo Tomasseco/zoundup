@@ -1,4 +1,4 @@
-# 🎵 ZoundUp
+# ZoundUp
 
 ZoundUp es una plataforma para artistas musicales donde pueden subir sus audios, compartir su página de presentación y recibir mensajes a través de un formulario de contacto. Inspirado en SoundCloud, ZoundUp busca ser una comunidad vibrante donde el talento pueda ser descubierto y compartido.
 
