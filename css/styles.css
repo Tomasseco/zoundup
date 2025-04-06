@@ -1,27 +1,73 @@
-body {
-    font-family: Arial, sans-serif;
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
   }
   
-  header {
-    background-color: #222;
-    color: white;
-    padding: 1rem;
+  html, body {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 1rem;
+    flex-direction: column;
   }
   
-  header img {
-    height: 50px;
-  }
-  
-  main {
+  section {
+    flex: 1;
     padding: 2rem;
+    background-color: #333;
+    background-image: url('../assets/images/girl.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: cover;
   }
   
+  /* Para pantallas pequeñas (móviles) */
+  @media (max-width: 768px) {
+    section {
+      background-size: 100% auto; /* Hace que la imagen ocupe todo el ancho pero mantenga la proporción */
+    }
+  }
+  
+  /* Para pantallas grandes (pantallas completas o escritorio) */
+  @media (min-width: 769px) {
+    section {
+      background-size:contain; /* Asegura que la imagen cubra todo el fondo */
+    }
+  }
+  
+  header {
+    color: white;
+    padding: 5px;
+    background: linear-gradient(to bottom,  #1b1b1b 0%,#0e0e0e 100%);
+
+  }
+  
+  nav {
+    background-color: #202020;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem;
+    transition:all 0.5s;
+  }
+
+  nav a:hover {
+    background-color: #44b14a;
+  }
+
   footer {
     background-color: #222;
     color: white;
