@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZoundUp</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <script src="js/music-player.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/logo.png" alt="Logo ZoundUp">
+        </header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a class="active-menu" href="#">Librería de sonidos</a></li>
+            </ul>
+        </nav>
+        <section>
+            <article>
+                <div class="audio-container">
+                    <div class="audio-item">
+                        <audio class="audio" data-id="audio1" src="./assets/sounds/bass-house-bassline_161bpm.mp3" ></audio>
+                        <div class="audio-controls">
+                            <h3>Bass House Bassline</h3>
+                            <p>Un bajo potente y enérgico, perfecto para tus producciones de Bass House.</p>
+                            <br>
+                            <h5>by GHOST</h5>
+                            <br>
+                            <img class="play-btn left" data-id="audio1-play" src="assets/images/btnstandby.png" alt="Play" />
+                            <input type="range" class="progress-bar left" data-id="audio1-progress" min="0" max="100" value="0" step="1">
+                            <h6>4.7s 161bpm</h6>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="audio-container">
+                    <div class="audio-item">
+                        <audio class="audio" data-id="audio2" src="./assets/sounds/simple-bassline-e_128bpm_E.mp3" ></audio>
+                        <div class="audio-controls">
+                            <h3>Simple Bassline E</h3>
+                            <p>Un simple bajo en E, ideal para crear una base sólida en tus producciones.</p>
+                            <br>
+                            <img class="play-btn left" data-id="audio2-play" src="assets/images/btnstandby.png" alt="Play" />
+                            <input type="range" class="progress-bar left" data-id="audio2-progress" min="0" max="100" value="0" step="1">
+                            <h6>7.5s 128bpm E</h6>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="audio-container">
+                    <div class="audio-item">
+                        <audio class="audio" data-id="audio1" src="./assets/sounds/bass-house-bassline_161bpm.mp3" ></audio>
+                        <div class="audio-controls">
+                            <h3>Bass House Bassline</h3>
+                            <p>Un bajo potente y enérgico, perfecto para tus producciones de Bass House.</p>
+                            <br>
+                            <h5>by GHOST</h5>
+                            <br>
+                            <img class="play-btn left" data-id="audio1-play" src="assets/images/btnstandby.png" alt="Play" />
+                            <input type="range" class="progress-bar left" data-id="audio1-progress" min="0" max="100" value="0" step="1">
+                            <h6>4.7s 161bpm</h6>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        
+        </section>
+        <footer>
+            <p>&copy; 2025 ZoundUp. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>
