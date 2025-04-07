@@ -1,261 +1,374 @@
-
+/* RESET BÁSICO */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  html, body {
-    height: 100%;
-    font-family: Arial, sans-serif;
-  }
-  
-  body {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  section {
-    flex: 1;
-    text-align: center;
-    padding: 2rem;
-    background-color: #333;
-    background-image: url('../assets/images/girl.png');
-    background-repeat: no-repeat;
-    background-position: center bottom;
-    background-size: cover;
-    overflow-y: auto
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  article {
-    background-color: #22222286;
-    backdrop-filter: blur(10px); /* Desenfoque del fondo */
-    -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
-    text-align: left;
-    color: white;
-    padding: 1rem;
-    margin: 1rem 0;
-    border-radius: 5px;
+html, body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LAYOUT GENERAL */
+section {
+  flex: 1;
+  text-align: center;
+  padding: 2rem;
+  background-color: #333;
+  background-image: url('../assets/images/girl.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  overflow-y: auto;
+  justify-content: flex-start;
+}
+
+article {
+  background-color: #22222286;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  text-align: left;
+  color: white;
+  padding: 1rem;
+  margin: 1rem 0;
+  border-radius: 5px;
+}
+
+header {
+  color: white;
+  padding: 10px 5px 5px;
+  background: linear-gradient(to bottom, #1b1b1b 0%, #0e0e0e 100%);
+}
+
+footer {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+/* MENÚ DE NAVEGACIÓN */
+nav {
+  background-color: #202020;
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background-color: #44b14a;
+}
+
+nav .active-menu {
+  background-color: #44b14a;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #F5F5F5;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ARTÍCULO Y TEXTO */
+article p {
+  color: #aaa9a9;
+}
+
+.left {
+  float: left;
+}
+
+/* FORMULARIO DE CONTACTO */
+.form-container {
+  background-color: #61616171;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  text-align: left;
+}
+
+.contact-form h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  color: #F5F5F5;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #BDBDBD;
+  font-weight: 500;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.55rem;
+  margin-bottom: 1.25rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus {
+  border: 2px solid #4CAF50;
+  background-color: #ebffec;
+  outline: none;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #9E9E9E;
+}
+
+.error {
+  color: #cc0000;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.success {
+  color: #4CAF50;
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+/* CONTROLES DE AUDIO */
+.audio-item {
+  display: block;
+  float: left;
+}
+
+.audio-item img {
+  vertical-align: middle;
+  margin-top: -10px;
+  margin-right: 10px;
+}
+
+.audio-container {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.play-btn {
+  width: 32px;
+  cursor: pointer;
+}
+
+.volume-slider {
+  width: 100px;
+}
+
+/* BARRA DE PROGRESO DE AUDIOS */
+input[type=range] {
+  width: 75%;
+  margin-right: 12px;
+  background-color: transparent;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  background: #205928;
+  border: 1.1px solid #18d501;
+  border-radius: 1px;
+  height: 11.3px;
+  cursor: pointer;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  margin-top: -6.95px;
+  width: 23px;
+  height: 23px;
+  background: #439643;
+  border: 2.5px solid #83e584;
+  border-radius: 12px;
+  cursor: pointer;
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #3faf4f;
+}
+
+input[type=range]::-moz-range-track {
+  background: #205928;
+  border: 1.1px solid #18d501;
+  border-radius: 1px;
+  height: 11.3px;
+  cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 23px;
+  height: 23px;
+  background: #439643;
+  border: 2.5px solid #83e584;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+  background: transparent;
+  border-color: transparent;
+  border-width: 8.45px 0;
+  color: transparent;
+  height: 11.3px;
+  cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+  background: #010301;
+  border: 1.1px solid #18d501;
+  border-radius: 2px;
+}
+
+input[type=range]::-ms-fill-upper {
+  background: #205928;
+  border: 1.1px solid #18d501;
+  border-radius: 2px;
+}
+
+input[type=range]::-ms-thumb {
+  width: 23px;
+  height: 23px;
+  background: #439643;
+  border: 2.5px solid #83e584;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 0;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+  background: #205928;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+  background: #3faf4f;
+}
+
+@supports (-ms-ime-align: auto) {
+  input[type=range] {
+    margin: 0;
+  }
+}
+
+/* MEDIA QUERIES */
+
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+  section {
+    background-size: 100% auto;
   }
 
   header {
-    color: white;
-    padding: 5px;
-    padding-top: 10px;
-    background: linear-gradient(to bottom,  #1b1b1b 0%,#0e0e0e 100%);
-
-  }
-
-  /* Para pantallas pequeñas (móviles) */
-  @media (max-width: 768px) {
-    section {
-      background-size: 100% auto;
-    }
-
-    header {
-        text-align: center; 
-    }
-
-    article {
-        width: 95%;
-        margin: 1rem auto;
-    }
-    article img {
-        width: 100%;
-        height: auto;
-        border-radius: 5px;
-    }
-  }
-  
-  /* Para pantallas grandes (pantallas completas o escritorio) */
-  @media (min-width: 769px) {
-    section {
-        background-size:contain; /* Asegura que la imagen cubra todo el fondo */
-        background-image:
-            url('../assets/images/girl.png'),
-            url('../assets/images/studio.jpg');
-        background-size: contain, cover;
-        background-position: center bottom, center top;
-    }
-       
-
-    article {
-        width: 80%;
-        max-width:600px;
-        margin: 10px auto;
-        text-align: left;
-        height:fit-content;
-    }
-
-    article img {
-        width: 50%;
-    }
-
-    input[type=range] {
-        width: 75%;
-    }
-
-}
-  
-  
-  nav {
-    background-color: #202020;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-    padding: 0.5rem;
-    transition:all 0.5s;
-  }
-
-  nav a:hover {
-    background-color: #44b14a;
-  }
-
-  nav .active-menu {
-    background-color: #44b14a;
-  }
-  footer {
-    background-color: #222;
-    color: white;
-    padding: 1rem;
     text-align: center;
   }
-  
-    article p {
-        color:#aaa9a9
-    }
 
-    .left {
-        float:left;
-    }
-    /* Controles de audio */
+  article {
+    width: 98%;
+    margin: 1rem auto;
+  }
 
-    .audio-item {
-      display: block;
-      float: left;
-    }
-    .audio-item img {
-       vertical-align: middle;
-       margin-top: -10px;
-       margin-right: 10px;
-    }
+  article img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+  }
 
-    .audio-container {
-        display: flex;
-        gap: 15px;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-items: flex-start;
-    }
-    
-    .play-btn {
-        width: 32px;  
-        cursor: pointer;
-    }
-    .volume-slider {
-        width: 100px;
-    }
+  .menu-text {
+    display: none;
+  }
 
+  .menu li a {
+    font-size: 1.4rem;
+    justify-content: center;
+  }
 
+  input[type=range] {
+    width: 50%;
+  }
+}
 
+/* Pantallas grandes (escritorio) */
+@media (min-width: 769px) {
+  section {
+    display: flex;
+    align-items: center;
+    background-size: contain;
+    background-image: url(../assets/images/girl.png), url(../assets/images/studio.jpg);
+    background-position: center bottom, center top;
+    background-size: contain, cover;
+    text-align: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
 
+  article {
+    width: 80%;
+    max-width: 600px;
+    margin: 10px auto;
+    text-align: left;
+    height: fit-content;
+  }
 
-    input[type=range] {
-        margin-right: 12px;
-        background-color: transparent;
-        -webkit-appearance: none;
-      }
-      input[type=range]:focus {
-        outline: none;
-      }
-      input[type=range]::-webkit-slider-runnable-track {
-        background: #205928;
-        border: 1.1px solid #18d501;
-        border-radius: 1px;
-        
-        height: 11.3px;
-        cursor: pointer;
-      }
-      input[type=range]::-webkit-slider-thumb {
-        margin-top: -6.95px;
-        width: 23px;
-        height: 23px;
-        background: #439643;
-        border: 2.5px solid #83e584;
-        border-radius: 12px;
-        cursor: pointer;
-        -webkit-appearance: none;
-      }
-      input[type=range]:focus::-webkit-slider-runnable-track {
-        background: #3faf4f;
-      }
-      input[type=range]::-moz-range-track {
-        background: #205928;
-        border: 1.1px solid #18d501;
-        border-radius: 1px;
-    
-        height: 11.3px;
-        cursor: pointer;
-      }
-      input[type=range]::-moz-range-thumb {
-        width: 23px;
-        height: 23px;
-        background: #439643;
-        border: 2.5px solid #83e584;
-        border-radius: 12px;
-        cursor: pointer;
-      }
-      input[type=range]::-ms-track {
-        background: transparent;
-        border-color: transparent;
-        border-width: 8.45px 0;
-        color: transparent;
-   
-        height: 11.3px;
-        cursor: pointer;
-      }
-      input[type=range]::-ms-fill-lower {
-        background: #010301;
-        border: 1.1px solid #18d501;
-        border-radius: 2px;
-      }
-      input[type=range]::-ms-fill-upper {
-        background: #205928;
-        border: 1.1px solid #18d501;
-        border-radius: 2px;
-      }
-      input[type=range]::-ms-thumb {
-        width: 23px;
-        height: 23px;
-        background: #439643;
-        border: 2.5px solid #83e584;
-        border-radius: 12px;
-        cursor: pointer;
-        margin-top: 0px;
-        /*Needed to keep the Edge thumb centred*/
-      }
-      input[type=range]:focus::-ms-fill-lower {
-        background: #205928;
-      }
-      input[type=range]:focus::-ms-fill-upper {
-        background: #3faf4f;
-      }
-      /*TODO: Use one of the selectors from https://stackoverflow.com/a/20541859/7077589 and figure out
-      how to remove the virtical space around the range input in IE*/
-      @supports (-ms-ime-align:auto) {
-        /* Pre-Chromium Edge only styles, selector taken from hhttps://stackoverflow.com/a/32202953/7077589 */
-        input[type=range] {
-          margin: 0;
-          /*Edge starts the margin from the thumb, not the track as other browsers do*/
-        }
-      }
-      
+  article img {
+    width: 50%;
+  }
+}

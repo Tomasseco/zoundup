@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ZoundUp</title>
+        <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+        <script src="js/validate-form.js"></script>
+    </head>
+    <body>
+        <header>
+            <img src="assets/images/logo.png" alt="Logo ZoundUp">
+        </header>
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-home"></i><span class="menu-text">Inicio</span></a></li>
+                <li><a href="soundlibrary.html"><i class="fas fa-music"></i><span class="menu-text">Librería</span></a></li>
+                <li><a class="active-menu" href="#"><i class="fas fa-envelope"></i><span class="menu-text">Contacto</span></a></li>
+            </ul>  
+        </nav>
+        <section>
+            <div class="form-container">
+                <form id="contact-form" class="contact-form" onsubmit="validateForm();return false;" method="POST">
+                    <h2>Formulario de Contacto</h2>
+                  
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre">
+                    <div class="error" id="error-nombre"></div>
+                  
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                    <div class="error" id="error-email"></div>
+                  
+                    <label for="departamento">Departamento</label>
+                    <select id="departamento" name="departamento">
+                      <option value="">Seleccione una opción</option>
+                      <option value="administrativo">Administrativo</option>
+                      <option value="soporte">Soporte</option>
+                    </select>
+                    <div class="error" id="error-departamento"></div>
+                  
+                    <label for="consulta">Consulta</label>
+                    <textarea id="consulta" name="consulta" rows="5"></textarea>
+                    <div class="error" id="error-consulta"></div>
+                  
+                    <button type="submit">Enviar</button>
+                    <div class="success" id="consulta-satisfactoria"></div>
+                  </form>
+              </div>
+        </section>
+        <footer>
+            <p>&copy; 2025 ZoundUp. Todos los derechos reservados.</p>
+        </footer>
+    </body>
+</html>

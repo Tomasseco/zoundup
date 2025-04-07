@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>ZoundUp</title>
         <link rel="stylesheet" href="css/styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
         <script src="js/music-player.js"></script>
     </head>
     <body>
@@ -12,10 +13,11 @@
             <img src="assets/images/logo.png" alt="Logo ZoundUp">
         </header>
         <nav>
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a class="active-menu" href="#">Librería de sonidos</a></li>
-            </ul>
+            <ul class="menu">
+                <li><a href="index.html"><i class="fas fa-home"></i><span class="menu-text">Inicio</span></a></li>
+                <li><a class="active-menu" href="#"><i class="fas fa-music"></i><span class="menu-text">Librería</span></a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i><span class="menu-text">Contacto</span></a></li>
+            </ul>  
         </nav>
         <section>
             <article>
@@ -53,21 +55,54 @@
             <article>
                 <div class="audio-container">
                     <div class="audio-item">
-                        <audio class="audio" data-id="audio1" src="./assets/sounds/bass-house-bassline_161bpm.mp3" ></audio>
+                        <audio class="audio" data-id="audio3" src="./assets/sounds/bass-house-bassline-only-dream_126bpm.mp3" ></audio>
                         <div class="audio-controls">
-                            <h3>Bass House Bassline</h3>
-                            <p>Un bajo potente y enérgico, perfecto para tus producciones de Bass House.</p>
+                            <h3>Bass House Bassline - Only Dream</h3>
+                            <p>Un bajo de Bass House que te hará soñar, ideal para tus producciones.</p>
                             <br>
-                            <h5>by GHOST</h5>
+                            <h5>By Oldie Ash</h5>
                             <br>
-                            <img class="play-btn left" data-id="audio1-play" src="assets/images/btnstandby.png" alt="Play" />
-                            <input type="range" class="progress-bar left" data-id="audio1-progress" min="0" max="100" value="0" step="1">
-                            <h6>4.7s 161bpm</h6>
+                            <img class="play-btn left" data-id="audio3-play" src="assets/images/btnstandby.png" alt="Play" />
+                            <input type="range" class="progress-bar left" data-id="audio3-progress" min="0" max="100" value="0" step="1">
+                            <h6>15.2s  126bpm</h6>
                         </div>
                     </div>
                 </div>
             </article>
-        
+            <article>
+                <div class="audio-container">
+                    <div class="audio-item">
+                        <audio class="audio" data-id="audio4" src="./assets/sounds/chill-lo-fi-hip-hop-trumpet-melody_98bpm_C_minor.mp3" ></audio>
+                        <div class="audio-controls">
+                            <h3>Chill Lo-fi Hip Hop Trumpet Melody</h3>
+                            <p>Una melodía de trompeta suave y relajante, perfecta para tus producciones de Lo-fi Hip Hop.</p>
+                            <br>
+                            <h5>By Prizm</h5>
+                            <br>
+                            <img class="play-btn left" data-id="audio4-play" src="assets/images/btnstandby.png" alt="Play" />
+                            <input type="range" class="progress-bar left" data-id="audio4-progress" min="0" max="100" value="0" step="1">
+                            <h6>4.9s 98bpm Cm</h6>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="audio-container">
+                    <div class="audio-item">
+                        <audio class="audio" data-id="audio5" src="./assets/sounds/chill-lo-fi-guitar-melody_80bpm_C__major.mp3" ></audio>
+                        <div class="audio-controls">
+                            <h3>Chill Lo-Fi Guitar Melody</h3>
+                            <p>Una melodía de trompeta suave y relajante, perfecta para tus producciones de Lo-fi Hip Hop.</p>
+                            <br>
+                            <h5>By cärperYT</h5>
+                            <br>
+                            <img class="play-btn left" data-id="audio5-play" src="assets/images/btnstandby.png" alt="Play" />
+                            <input type="range" class="progress-bar left" data-id="audio5-progress" min="0" max="100" value="0" step="1">
+                            <h6>12.0s  80bpm</h6>
+                        </div>
+                    </div>
+                </div>
+            </article>
         </section>
         <footer>
             <p>&copy; 2025 ZoundUp. Todos los derechos reservados.</p>
